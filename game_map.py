@@ -1,13 +1,13 @@
 import numpy as np # type: ignore
 from tcod.console import Console
 
-import tiles_types
+import tile_types
 
 
 class GameMap:
     def __init__(self, width: int, height: int):
         self.width, self.height = width, height
-        self.tiles = np.full((width, height), fill_value=tiles_types.wall, order="F")
+        self.tiles = np.full((width, height), fill_value=tile_types.wall, order="F")
 
 
     def in_bounds(self, x: int, y: int) -> bool:
